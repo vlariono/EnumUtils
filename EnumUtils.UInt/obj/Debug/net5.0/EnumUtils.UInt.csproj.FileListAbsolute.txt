@@ -1,0 +1,12 @@
+c:\GIT\EnumUtils\EnumUtils.UInt\obj\Debug\net5.0\EnumUtils.UInt.csprojAssemblyReference.cache
+c:\GIT\EnumUtils\EnumUtils.UInt\obj\Debug\net5.0\EnumUtils.UInt.GeneratedMSBuildEditorConfig.editorconfig
+c:\GIT\EnumUtils\EnumUtils.UInt\obj\Debug\net5.0\EnumUtils.UInt.AssemblyInfoInputs.cache
+c:\GIT\EnumUtils\EnumUtils.UInt\obj\Debug\net5.0\EnumUtils.UInt.AssemblyInfo.cs
+c:\GIT\EnumUtils\EnumUtils.UInt\obj\Debug\net5.0\EnumUtils.UInt.csproj.CoreCompileInputs.cache
+c:\GIT\EnumUtils\EnumUtils.UInt\bin\Debug\net5.0\EnumUtils.UInt.deps.json
+c:\GIT\EnumUtils\EnumUtils.UInt\bin\Debug\net5.0\EnumUtils.UInt.dll
+c:\GIT\EnumUtils\EnumUtils.UInt\bin\Debug\net5.0\ref\EnumUtils.UInt.dll
+c:\GIT\EnumUtils\EnumUtils.UInt\bin\Debug\net5.0\EnumUtils.UInt.pdb
+c:\GIT\EnumUtils\EnumUtils.UInt\obj\Debug\net5.0\EnumUtils.UInt.dll
+c:\GIT\EnumUtils\EnumUtils.UInt\obj\Debug\net5.0\ref\EnumUtils.UInt.dll
+c:\GIT\EnumUtils\EnumUtils.UInt\obj\Debug\net5.0\EnumUtils.UInt.pdb

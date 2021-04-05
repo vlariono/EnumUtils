@@ -1,0 +1,12 @@
+C:\GIT\EnumUtils\CustomString\obj\Debug\net5.0\EnumUtils.CustomString.csprojAssemblyReference.cache
+C:\GIT\EnumUtils\CustomString\obj\Debug\net5.0\EnumUtils.CustomString.GeneratedMSBuildEditorConfig.editorconfig
+C:\GIT\EnumUtils\CustomString\obj\Debug\net5.0\EnumUtils.CustomString.AssemblyInfoInputs.cache
+C:\GIT\EnumUtils\CustomString\obj\Debug\net5.0\EnumUtils.CustomString.AssemblyInfo.cs
+C:\GIT\EnumUtils\CustomString\obj\Debug\net5.0\EnumUtils.CustomString.csproj.CoreCompileInputs.cache
+c:\GIT\EnumUtils\CustomString\bin\Debug\net5.0\EnumUtils.CustomString.deps.json
+C:\GIT\EnumUtils\CustomString\bin\Debug\net5.0\EnumUtils.CustomString.dll
+c:\GIT\EnumUtils\CustomString\bin\Debug\net5.0\ref\EnumUtils.CustomString.dll
+C:\GIT\EnumUtils\CustomString\bin\Debug\net5.0\EnumUtils.CustomString.pdb
+C:\GIT\EnumUtils\CustomString\obj\Debug\net5.0\EnumUtils.CustomString.dll
+C:\GIT\EnumUtils\CustomString\obj\Debug\net5.0\ref\EnumUtils.CustomString.dll
+C:\GIT\EnumUtils\CustomString\obj\Debug\net5.0\EnumUtils.CustomString.pdb
