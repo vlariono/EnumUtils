@@ -8,24 +8,30 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\dv\\.nuget\\packages\\": {}
+    "C:\\Users\\larvas\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GIT\\EnumUtils\\EnumUtils.UInt\\EnumUtils.UInt.csproj",
-      "projectName": "EnumUtils.UInt",
-      "projectPath": "C:\\GIT\\EnumUtils\\EnumUtils.UInt\\EnumUtils.UInt.csproj",
-      "packagesPath": "C:\\Users\\dv\\.nuget\\packages\\",
-      "outputPath": "C:\\GIT\\EnumUtils\\EnumUtils.UInt\\obj\\",
+      "projectUniqueName": "c:\\GIT\\EnumUtils\\ToUtils.Convert\\ToUtils.Convert.csproj",
+      "projectName": "ToUtils.Convert",
+      "projectPath": "c:\\GIT\\EnumUtils\\ToUtils.Convert\\ToUtils.Convert.csproj",
+      "packagesPath": "C:\\Users\\larvas\\.nuget\\packages\\",
+      "outputPath": "c:\\GIT\\EnumUtils\\ToUtils.Convert\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\dv\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\larvas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -58,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

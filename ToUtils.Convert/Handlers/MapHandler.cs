@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Concurrent;
 
-namespace EnumUtils.String.Handlers
+namespace ToUtils.Convert.Handlers
 {
     internal sealed class MapHandler<TSource, TResult>
     where TSource : notnull

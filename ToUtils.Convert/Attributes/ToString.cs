@@ -1,11 +1,11 @@
 using System;
 
-namespace EnumUtils.String.Attributes
+namespace ToUtils.Convert.Attributes
 {
     [AttributeUsage(AttributeTargets.Field, AllowMultiple = false)]
-    public class CustomString : Attribute
+    public class ToString : Attribute
     {
-        public CustomString(string value)
+        public ToString(string value)
         {
             Value = value;
         }

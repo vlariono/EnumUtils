@@ -1,0 +1,12 @@
+c:\GIT\EnumUtils\ToUtils.Convert\obj\Debug\net5.0\ToUtils.Convert.csprojAssemblyReference.cache
+c:\GIT\EnumUtils\ToUtils.Convert\obj\Debug\net5.0\ToUtils.Convert.GeneratedMSBuildEditorConfig.editorconfig
+c:\GIT\EnumUtils\ToUtils.Convert\obj\Debug\net5.0\ToUtils.Convert.AssemblyInfoInputs.cache
+c:\GIT\EnumUtils\ToUtils.Convert\obj\Debug\net5.0\ToUtils.Convert.AssemblyInfo.cs
+c:\GIT\EnumUtils\ToUtils.Convert\obj\Debug\net5.0\ToUtils.Convert.csproj.CoreCompileInputs.cache
+C:\GIT\EnumUtils\ToUtils.Convert\bin\Debug\net5.0\ToUtils.Convert.deps.json
+C:\GIT\EnumUtils\ToUtils.Convert\bin\Debug\net5.0\ToUtils.Convert.dll
+C:\GIT\EnumUtils\ToUtils.Convert\bin\Debug\net5.0\ref\ToUtils.Convert.dll
+C:\GIT\EnumUtils\ToUtils.Convert\bin\Debug\net5.0\ToUtils.Convert.pdb
+C:\GIT\EnumUtils\ToUtils.Convert\obj\Debug\net5.0\ToUtils.Convert.dll
+C:\GIT\EnumUtils\ToUtils.Convert\obj\Debug\net5.0\ref\ToUtils.Convert.dll
+C:\GIT\EnumUtils\ToUtils.Convert\obj\Debug\net5.0\ToUtils.Convert.pdb

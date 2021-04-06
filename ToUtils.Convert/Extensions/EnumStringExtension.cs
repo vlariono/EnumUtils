@@ -1,25 +1,22 @@
 using System;
-using System.Collections.Concurrent;
+using System.Linq;
 using System.Reflection;
-using EnumUtils.String.Attributes;
-using EnumUtils.String.Enums;
-using EnumUtils.String.Handlers;
-using EnumUtils.UInt.Extensions;
+using ToUtils.Convert.Attributes;
+using ToUtils.Convert.Enums;
+using ToUtils.Convert.Handlers;
 
-namespace EnumUtils.String.Extensions
+namespace ToUtils.Convert.Extensions
 {
     /// <summary>
     /// Contains utils to convert between string and enums
     /// </summary>
-    public static class EnumExtension
+    public static class EnumStringExtension
     {
         private static readonly MapHandler<(Type Type, ulong Value), (Type Type, string StringValue)> Map;
-        private static readonly ConcurrentDictionary<Type, bool> MapsDone;
 
-        static EnumExtension()
+        static EnumStringExtension()
         {
             Map = new MapHandler<(Type, ulong), (Type, string)>();
-            MapsDone = new ConcurrentDictionary<Type, bool>();
         }
 
         /// <summary>
@@ -27,13 +24,13 @@ namespace EnumUtils.String.Extensions
         /// </summary>
         /// <param name="enumValue">Enum value to convert to string</param>
         /// <param name="stringSource">Source of the string</param>
-        public static string ToString<T>(this T enumValue, StringSource stringSource) where T : struct, Enum
+        public static string ToString<TEnum>(this TEnum enumValue, Source stringSource) where TEnum : struct, Enum
         {
             string? resultString = null;
-            if ((stringSource & StringSource.CustomString) != 0)
+            if ((stringSource & Source.Attribute) != 0)
             {
-                var type = typeof(T);
-                var value = enumValue.ToUInt();
+                var type = typeof(TEnum);
+                var value = enumValue.ToULong();
                 var key = (type, value);
                 if (Map.TryGet(key, out var mapResult))
                 {
@@ -46,7 +43,7 @@ namespace EnumUtils.String.Extensions
                     var field = type.GetField(name);
                     if (field != null)
                     {
-                        resultString = field.GetCustomAttribute<CustomString>()?.Value;
+                        resultString = field.GetCustomAttribute<ToString>()?.Value;
                     }
 
                     if (string.IsNullOrEmpty(resultString))
@@ -66,13 +63,13 @@ namespace EnumUtils.String.Extensions
         /// </summary>
         public static bool TryToEnum<T>(this string stringValue, out T result) where T : struct, Enum
         {
-            return stringValue.TryToEnum<T>(StringSource.CustomString, out result);
+            return stringValue.TryToEnum<T>(Source.Attribute, out result);
         }
 
         /// <summary>
         /// Converts the string to an equivalent enumerated object
         /// </summary>
-        public static bool TryToEnum<T>(this string stringValue, StringSource stringSource, out T result) where T : struct, Enum
+        public static bool TryToEnum<T>(this string stringValue, Source stringSource, out T result) where T : struct, Enum
         {
             result = default;
             if (string.IsNullOrEmpty(stringValue))
@@ -80,12 +77,27 @@ namespace EnumUtils.String.Extensions
                 return false;
             }
 
-            if ((stringSource & StringSource.CustomString) != 0)
+            if ((stringSource & Source.Attribute) != 0)
             {
-                BuildMap<T>();
                 var type = typeof(T);
                 var key = (type, stringValue);
                 if (Map.TryGet(key, out var mapResult))
+                {
+                    result = mapResult.Value.ToEnum<T>();
+                    return true;
+                }
+
+                foreach(var value in type.GetEnumValues().Cast<T>().Where(e => !Map.TryGet((typeof(T), e.ToULong()),out var _)))
+                {
+                    var currentString = value.ToString(Source.Attribute);
+                    if(currentString.Equals(stringValue,StringComparison.Ordinal))
+                    {
+                        result = value;
+                        return true;
+                    }
+                }
+
+                if (Map.TryGet(key, out mapResult))
                 {
                     result = mapResult.Value.ToEnum<T>();
                     return true;
@@ -102,24 +114,9 @@ namespace EnumUtils.String.Extensions
         public static bool AssignString<T>(this T enumValue, string stringValue) where T : struct, Enum
         {
             var type = typeof(T);
-            var source = (type, enumValue.ToUInt());
+            var source = (type, enumValue.ToULong());
             var result = (type, stringValue);
             return Map.TryAdd(source, result);
-        }
-
-        internal static void BuildMap<T>() where T : struct, Enum
-        {
-            var type = typeof(T);
-            if (MapsDone.TryGetValue(type, out var done) && done)
-            {
-                return;
-            }
-
-            foreach (T value in type.GetEnumValues())
-            {
-                value.ToString(StringSource.CustomString);
-            }
-            MapsDone.TryAdd(type, true);
         }
     }
 }

@@ -7,27 +7,14 @@
   "targets": {
     ".NETCoreApp,Version=v5.0": {
       "ToUtils.Convert/1.0.0": {
-        "dependencies": {
-          "EnumUtils.UInt": "1.0.0"
-        },
         "runtime": {
           "ToUtils.Convert.dll": {}
-        }
-      },
-      "EnumUtils.UInt/1.0.0": {
-        "runtime": {
-          "EnumUtils.UInt.dll": {}
         }
       }
     }
   },
   "libraries": {
     "ToUtils.Convert/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "EnumUtils.UInt/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
